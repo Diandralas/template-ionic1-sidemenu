@@ -39,9 +39,12 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+   $scope.valorhome= cozinhaService.getInfo()
 })
 
 .controller('PlaylistsCtrl', function($scope,cozinhaService) {
+  $scope.valorhome= cozinhaService.getInfo()
+
   $scope.playlists = [
     { title: 'Pop', id: 1 },
     { title: 'Funk', id: 2 },
@@ -51,4 +54,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams,cozinhaService) {
+   $scope.valorhome= cozinhaService.getInfo()
+   console.log($scope.valorhome)
 });
+
